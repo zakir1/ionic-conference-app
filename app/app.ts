@@ -13,9 +13,10 @@ import {TutorialPage} from './pages/tutorial/tutorial';
   config: {}
 })
 class ConferenceApp {
-  constructor(app: IonicApp, config: Config, confData: ConferenceData) {
-    this.app = app;
-
+  private root: Function;
+  private pages: Array<{title: string, component: Function, icon: string}>
+  
+  constructor(private app: IonicApp, confData: ConferenceData) {
     // load the conference data
     confData.load();
 
@@ -29,7 +30,7 @@ class ConferenceApp {
       { title: 'Schedules', component: TabsPage, icon: 'calendar' },
       { title: 'Login', component: LoginPage, icon: 'log-in' },
       { title: 'Signup', component: SignupPage, icon: 'person-add' },
-      { title: 'Logout', component: LoginPage, icon: 'log-out' },
+      { title: 'Logout', component: LoginPage, icon: 'log-out' }
     ];
   }
 

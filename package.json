@@ -17,6 +17,7 @@
   },
   "devDependencies": {
     "awesome-typescript-loader": "^0.15.9",
+    "del": "^2.2.0",
     "gulp": "^3.9.0",
     "gulp-autoprefixer": "^3.1.0",
     "gulp-sass": "^2.1.1",

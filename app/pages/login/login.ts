@@ -7,15 +7,10 @@ import {SignupPage} from '../signup/signup';
   templateUrl: 'build/pages/login/login.html'
 })
 export class LoginPage {
-  nav: any;
-  app: any;
+  private login: Object = {};
+  private submitted: boolean = false;
   
-  constructor(nav: NavController) {
-    this.nav = nav;
-
-    this.login = {};
-    this.submitted = false;
-  }
+  constructor(private nav: NavController) {}
 
   onLogin(form) {
     this.submitted = true;

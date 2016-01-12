@@ -14,28 +14,16 @@ var gulp = require('gulp'),
 
 var IONIC_DIR = "node_modules/ionic-framework/"
 
-/******************************************************************************
- * watch
- * Build the app, and rebuild when source files change.
- * Also starts a local web server.
- ******************************************************************************/
-gulp.task('watch', ['sass', 'fonts'], function(done) {
-  watch('www/app/**/*.scss', function(){
-    gulp.start('sass');
-  });
-  compile(true, function(){
-    gulp.start('serve');
-    done();
-  });
-});
-
 
 /******************************************************************************
  * build
  * Build the app once, without watching for source file changes.
  ******************************************************************************/
 gulp.task('build', ['sass', 'fonts'], function(done) {
-  compile(false, done);
+  watch('www/app/**/*.scss', function(){
+    gulp.start('sass');
+  });
+  compile(true, done);
 });
 
 
