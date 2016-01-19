@@ -19,14 +19,17 @@ var IONIC_DIR = "node_modules/ionic-framework/"
  * build
  * Build the app once, without watching for source file changes.
  ******************************************************************************/
-gulp.task('build', ['sass', 'fonts'], function(done) {
+gulp.task('build', ['sass', 'fonts', 'copy.html'], function(done) {
   watch('www/app/**/*.scss', function(){
     gulp.start('sass');
   });
   compile(true, done);
 });
 
-
+gulp.task('copy.html', function(){
+  return gulp.src('app/**/*.html')
+    .pipe(gulp.dest('www/build'));
+});
 /******************************************************************************
  * sass
  * Convert Sass files to a single bundled CSS file. Uses auto-prefixer
