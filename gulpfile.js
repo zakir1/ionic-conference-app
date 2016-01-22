@@ -49,7 +49,10 @@ gulp.task('sass', function(){
 
   return gulp.src('app/theme/app.+(ios|md).scss')
     .pipe(sass({
-      includePaths: [IONIC_DIR],
+      includePaths: [
+        IONIC_DIR,
+        'node_modules/ionicons/dist/scss'
+      ]
     }))
     .on('error', function(err){
       console.error(err.message);
