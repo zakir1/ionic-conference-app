@@ -1,3 +1,7 @@
+import 'es6-shim/es6-shim.min';
+import 'reflect-metadata';
+import 'zone.js';
+
 import {App, IonicApp, Events} from 'ionic-framework/ionic';
 import {Inject} from 'angular2/core';
 import {ConferenceData} from './providers/conference-data';
