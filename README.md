@@ -11,7 +11,7 @@ This is purely a demo of Ionic v2.0 alpha and is still in development. **There i
  - [File Structure of App](#file-structure-of-app)
  - [Coming Soon](#coming-soon)
 
-## Getting Started
+## Getting Started ..
 
 * Clone this repository.
 * Run `npm install --production` on project root.
